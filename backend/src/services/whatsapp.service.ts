@@ -1,5 +1,6 @@
 import { Client, LocalAuth } from 'whatsapp-web.js';
 import qrcode from 'qrcode-terminal';
+import puppeteer from 'puppeteer';
 
 // Initialize the WhatsApp Client
 // We use LocalAuth so the session is saved and we don't need to scan QR code every time
@@ -8,7 +9,17 @@ export const whatsappClient = new Client({
     dataPath: './.wwebjs_auth' // stores session in this directory
   }),
   puppeteer: {
-    args: ['--no-sandbox', '--disable-setuid-sandbox']
+    executablePath: process.env.RENDER ? puppeteer.executablePath() : undefined,
+    args: [
+      '--no-sandbox', 
+      '--disable-setuid-sandbox',
+      '--disable-dev-shm-usage',
+      '--disable-accelerated-2d-canvas',
+      '--no-first-run',
+      '--no-zygote',
+      '--single-process',
+      '--disable-gpu'
+    ]
   }
 });
 
