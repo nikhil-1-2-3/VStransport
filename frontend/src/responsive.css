@@ -96,29 +96,25 @@ html, body, #root {
 
 /* Login Page Extreme Overrides */
 @media (max-width: 1024px) {
-  .vanta-theme-container .auth-overlay {
-    position: relative !important;
-    right: auto !important;
-    top: auto !important;
-    transform: none !important;
-    display: flex !important;
-    justify-content: center !important;
-    padding: 2rem !important;
-    width: 100% !important;
-    margin-top: 50vh !important;
-  }
-
-  .vanta-theme-container .hero-foreground {
-    top: 5rem !important;
-    transform: none !important;
-    padding: 1rem !important;
-    text-align: center !important;
-    width: 100% !important;
-  }
-
   .vanta-theme-container .hero-content h1 {
     font-size: 3rem !important;
     text-align: center !important;
+  }
+  
+  .vanta-theme-container .hero-foreground {
+    padding: 0 1rem !important;
+    text-align: center !important;
+    width: 100% !important;
+    display: flex !important;
+    justify-content: center !important;
+    flex-direction: column !important;
+  }
+  
+  .vanta-theme-container .hero-actions {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    gap: 1rem !important;
   }
 
   .vanta-theme-container .map-split-layout {

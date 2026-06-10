@@ -269,7 +269,7 @@ export const Login: React.FC = () => {
       </section>
 
       {/* About Us: What We Do & Pixel Reveal */}
-      <section id="about" className="tech-section light-section">
+      <section id="about" className="tech-section">
         <div className="tech-container about-flex-layout">
           <div className="about-content-left">
             <motion.h2 
@@ -299,7 +299,7 @@ export const Login: React.FC = () => {
       </section>
 
       {/* Upscaled Core Capabilities */}
-      <section id="services" className="tech-section capabilities-massive-section light-section relative-section">
+      <section id="services" className="tech-section capabilities-massive-section relative-section">
         {/* Soft Animated Background */}
         <div className="light-animated-bg">
           <div className="orb orb-1"></div>
@@ -341,7 +341,7 @@ export const Login: React.FC = () => {
       </section>
 
       {/* Contact & Animated Map Overlay */}
-      <section id="contact" className="tech-section contact-map-section light-section">
+      <section id="contact" className="tech-section contact-map-section">
         <div className="tech-container map-split-layout">
           <motion.div 
             className="contact-details-huge"
@@ -360,15 +360,22 @@ export const Login: React.FC = () => {
             <div className="huge-contact-item">
               <Phone size={28} className="accent-icon" />
               <div>
-                <h4>OPERATIONS HOTLINE</h4>
-                <p>+91 98765 43210</p>
+                <h4>AKASH SINGH (LUCKY)</h4>
+                <p>+91 79059 37814</p>
+              </div>
+            </div>
+            <div className="huge-contact-item">
+              <Phone size={28} className="accent-icon" />
+              <div>
+                <h4>VINAY PRATAP SINGH</h4>
+                <p>+91 99258 03262</p>
               </div>
             </div>
             <div className="huge-contact-item">
               <Mail size={28} className="accent-icon" />
               <div>
                 <h4>SECURE COMM</h4>
-                <p>operations@vstransport.com</p>
+                <p>vstransport9925@gmail.com</p>
               </div>
             </div>
           </motion.div>
@@ -399,7 +406,7 @@ export const Login: React.FC = () => {
       </section>
 
       {/* Minimal Footer */}
-      <footer className="tech-footer light-footer">
+      <footer className="tech-footer">
         <div className="tech-container footer-flex">
           <div className="footer-brand">
             <Truck size={24} className="accent-icon" />
