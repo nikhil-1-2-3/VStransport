@@ -1,0 +1,151 @@
+/* =========================================
+   GLOBAL RESPONSIVE OVERRIDES
+   Ensures ALL elements scale correctly on Mobile
+========================================= */
+
+html, body, #root {
+  overflow-x: hidden;
+  width: 100%;
+  max-width: 100vw;
+  margin: 0;
+  padding: 0;
+}
+
+/* Base resets to prevent horizontal scrolling */
+* {
+  max-width: 100vw;
+}
+
+/* Admin Layout Mobile Overrides */
+@media (max-width: 1024px) {
+  .admin-layout .main-content {
+    margin-left: 0 !important;
+    width: 100% !important;
+  }
+  .admin-layout .sidebar {
+    transform: translateX(-100%);
+  }
+  .admin-layout .sidebar.open {
+    transform: translateX(0);
+  }
+  .mobile-menu-btn {
+    display: flex !important;
+  }
+  .search-container {
+    display: none !important;
+  }
+}
+
+/* Dashboard Global Mobile */
+@media (max-width: 768px) {
+  /* Grids */
+  .dashboard-content,
+  .panel-grid,
+  .stats-grid,
+  .form-grid,
+  .stats-overview-desktop,
+  .account-desktop-grid,
+  .profile-details-grid-desktop,
+  .history-grid {
+    grid-template-columns: 1fr !important;
+    display: flex !important;
+    flex-direction: column !important;
+  }
+
+  .stat-card,
+  .chart-section,
+  .feed-section,
+  .admin-panel-container {
+    width: 100% !important;
+    padding: var(--space-4) !important;
+  }
+
+  /* Typography */
+  .page-title, h1 {
+    font-size: 1.5rem !important;
+  }
+  .stat-value {
+    font-size: 2rem !important;
+  }
+
+  /* Tables */
+  .data-table-container,
+  .table-responsive {
+    width: 100% !important;
+    overflow-x: auto !important;
+    -webkit-overflow-scrolling: touch !important;
+    display: block !important;
+  }
+
+  .data-table {
+    min-width: 800px; /* Forces scroll instead of squishing */
+  }
+
+  /* Modals */
+  .modal-content,
+  .modal-centered {
+    width: 95% !important;
+    padding: 1.5rem !important;
+    margin: 10px auto !important;
+  }
+  
+  .form-row {
+    flex-direction: column !important;
+  }
+}
+
+/* Login Page Extreme Overrides */
+@media (max-width: 1024px) {
+  .vanta-theme-container .auth-overlay {
+    position: relative !important;
+    right: auto !important;
+    top: auto !important;
+    transform: none !important;
+    display: flex !important;
+    justify-content: center !important;
+    padding: 2rem !important;
+    width: 100% !important;
+    margin-top: 50vh !important;
+  }
+
+  .vanta-theme-container .hero-foreground {
+    top: 5rem !important;
+    transform: none !important;
+    padding: 1rem !important;
+    text-align: center !important;
+    width: 100% !important;
+  }
+
+  .vanta-theme-container .hero-content h1 {
+    font-size: 3rem !important;
+    text-align: center !important;
+  }
+
+  .vanta-theme-container .map-split-layout {
+    grid-template-columns: 1fr !important;
+    display: flex !important;
+    flex-direction: column !important;
+  }
+
+  .vanta-theme-container .about-flex-layout {
+    grid-template-columns: 1fr !important;
+    display: flex !important;
+    flex-direction: column !important;
+  }
+  
+  .sleek-header {
+    flex-direction: column !important;
+    gap: 1rem !important;
+    padding: 1rem !important;
+  }
+
+  .nav-links {
+    display: none !important; /* Hide links on mobile login */
+  }
+
+  .huge-contact-item {
+    flex-direction: column !important;
+    align-items: center !important;
+    text-align: center !important;
+  }
+}
