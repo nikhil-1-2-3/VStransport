@@ -169,7 +169,7 @@ export const Login: React.FC = () => {
             exit={{ opacity: 0, transition: { duration: 1, ease: "easeInOut" } }}
           >
             <div className="boot-content">
-              <Truck size={48} className="accent-icon" />
+              <img src="/logo.png" alt="Logo" style={{ width: '80px', objectFit: 'contain', marginBottom: '1rem' }} />
               <motion.h2 
                 initial={{ opacity: 0, letterSpacing: "10px" }}
                 animate={{ opacity: 1, letterSpacing: "4px" }}
@@ -201,8 +201,8 @@ export const Login: React.FC = () => {
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 1 }}
       >
-        <div className="logo-area">
-          <Truck size={24} className="accent-icon" />
+        <div className="logo-area" style={{ display: 'flex', alignItems: 'center', gap: '10px' }}>
+          <img src="/logo.png" alt="Logo" style={{ width: '40px', objectFit: 'contain' }} />
           <span className="brand-title">V S TRANSPORT</span>
         </div>
         <nav className="nav-links">
@@ -409,9 +409,9 @@ export const Login: React.FC = () => {
       <footer className="tech-footer">
         <div className="tech-container footer-flex">
           <div className="footer-brand">
-            <Truck size={24} className="accent-icon" />
-            <span className="brand-title">V S TRANSPORT</span>
-            <p className="footer-tagline">Logistics without limits.</p>
+            <img src="/logo.png" alt="Logo" style={{ width: '40px', objectFit: 'contain' }} />
+            <h3 className="brand-title">V S TRANSPORT</h3>
+            <p className="footer-tagline">Global Logistics Intelligence.</p>
           </div>
           <div className="footer-links">
             <div className="link-group">

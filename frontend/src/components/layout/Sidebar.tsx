@@ -22,7 +22,7 @@ export const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
     <aside className={`sidebar ${isOpen ? 'open' : ''}`}>
       <div className="sidebar-header">
         <div className="logo-box">
-          <Truck className="logo-icon" size={24} />
+          <img src="/logo.png" alt="Logo" style={{ width: '40px', objectFit: 'contain' }} />
         </div>
         <h2 className="brand-name">TMP</h2>
         {/* Mobile close button inside sidebar header if needed, but clicking overlay is enough. We'll add a simple X button just in case. */}

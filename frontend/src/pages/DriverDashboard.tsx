@@ -205,7 +205,7 @@ export const DriverDashboard: React.FC = () => {
       {/* Sidebar Navigation */}
       <aside className="driver-sidebar">
         <div className="sidebar-header">
-          <Truck className="brand-icon" size={28} color="#2563eb" />
+          <img src="/logo.png" alt="Logo" style={{ width: '40px', objectFit: 'contain' }} />
           <h2 className="brand-title">TMP Driver</h2>
         </div>
         
