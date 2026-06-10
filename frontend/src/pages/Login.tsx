@@ -354,7 +354,7 @@ export const Login: React.FC = () => {
               <MapPin size={28} className="accent-icon" />
               <div>
                 <h4>HEADQUARTERS</h4>
-                <p>123 Transport Avenue, Logistics Park<br/>New Delhi, ND 110001</p>
+                <p>Sai Heaven<br/>Surat, Gujarat</p>
               </div>
             </div>
             <div className="huge-contact-item">
@@ -393,7 +393,7 @@ export const Login: React.FC = () => {
               <div className="radar-circle rc-2"></div>
             </div>
             <iframe 
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d112061.09262723652!2d77.12305445000001!3d28.6436846!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390cfd5b347eb62d%3A0x37205b715389640!2sNew%20Delhi%2C%20Delhi!5e0!3m2!1sen!2sin!4v1700000000000!5m2!1sen!2sin" 
+              src="https://maps.google.com/maps?q=21.1564883,72.9576756&t=&z=15&ie=UTF8&iwloc=&output=embed" 
               width="100%" 
               height="100%" 
               style={{ border: 0, filter: 'grayscale(100%) invert(90%) contrast(120%)' }} 
