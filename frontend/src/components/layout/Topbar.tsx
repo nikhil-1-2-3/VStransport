@@ -1,17 +1,26 @@
 import React from 'react';
-import { Bell, Search } from 'lucide-react';
+import { Bell, Search, Menu } from 'lucide-react';
 import './Topbar.css';
 
-export const Topbar: React.FC = () => {
+interface TopbarProps {
+  onMenuClick?: () => void;
+}
+
+export const Topbar: React.FC<TopbarProps> = ({ onMenuClick }) => {
   return (
     <header className="topbar">
-      <div className="search-container">
-        <Search className="search-icon" size={18} />
-        <input 
-          type="text" 
-          placeholder="Search trips, trucks, drivers..." 
-          className="search-input"
-        />
+      <div className="topbar-left">
+        <button className="mobile-menu-btn" onClick={onMenuClick}>
+          <Menu size={24} />
+        </button>
+        <div className="search-container">
+          <Search className="search-icon" size={18} />
+          <input 
+            type="text" 
+            placeholder="Search..." 
+            className="search-input"
+          />
+        </div>
       </div>
       <div className="topbar-actions">
         <button className="icon-button notification-btn">

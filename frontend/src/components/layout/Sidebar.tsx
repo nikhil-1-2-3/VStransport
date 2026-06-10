@@ -12,14 +12,23 @@ const navItems = [
   { path: '/settings', icon: <Settings size={20} />, label: 'Settings' },
 ];
 
-export const Sidebar: React.FC = () => {
+interface SidebarProps {
+  isOpen?: boolean;
+  onClose?: () => void;
+}
+
+export const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
   return (
-    <aside className="sidebar">
+    <aside className={`sidebar ${isOpen ? 'open' : ''}`}>
       <div className="sidebar-header">
         <div className="logo-box">
           <Truck className="logo-icon" size={24} />
         </div>
         <h2 className="brand-name">TMP</h2>
+        {/* Mobile close button inside sidebar header if needed, but clicking overlay is enough. We'll add a simple X button just in case. */}
+        <button className="mobile-close-btn" onClick={onClose}>
+          ✕
+        </button>
       </div>
       <nav className="sidebar-nav">
         {navItems.map((item) => (

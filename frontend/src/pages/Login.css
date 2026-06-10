@@ -314,3 +314,19 @@ input:-webkit-autofill:active {
 .light-footer .link-group a, .light-footer .link-group span { color: #475569; }
 .light-footer .link-group a:hover { color: #4f46e5; }
 .light-footer .footer-bottom { border-top: 1px solid #e2e8f0; }
+
+/* Responsive Enhancements */
+@media (max-width: 768px) {
+  .sleek-header { flex-direction: column; gap: 1rem; padding: 1rem; }
+  .nav-links { display: none; }
+  .hero-content h1 { font-size: 2.5rem; }
+  .auth-overlay { position: static; width: 100%; transform: none; display: flex; justify-content: center; padding: 2rem; background: var(--bg-primary); }
+  .auth-glass-panel { width: 100%; max-width: 400px; padding: 2rem; }
+  .about-flex-layout { flex-direction: column; }
+  .map-split-layout { grid-template-columns: 1fr; }
+  .huge-contact-item { flex-direction: column; gap: 0.5rem; }
+  .tech-modal-content { padding: 2rem; margin: 1rem; }
+  .capabilities-massive-section { padding: 4rem 1rem; }
+  .hero-foreground { top: 10%; transform: none; padding: 1rem; }
+  .hero-massive-section { height: auto; min-height: 100vh; display: flex; flex-direction: column; }
+}

@@ -8,6 +8,7 @@ import './AdminLayout.css';
 
 export const AdminLayout: React.FC = () => {
   const { user } = useAuthStore();
+  const [isSidebarOpen, setIsSidebarOpen] = React.useState(false);
 
   useEffect(() => {
     // Globally request permission for push notifications when admin logs in
@@ -18,9 +19,13 @@ export const AdminLayout: React.FC = () => {
 
   return (
     <div className="admin-layout">
-      <Sidebar />
+      {/* Mobile overlay */}
+      {isSidebarOpen && (
+        <div className="sidebar-overlay" onClick={() => setIsSidebarOpen(false)} />
+      )}
+      <Sidebar isOpen={isSidebarOpen} onClose={() => setIsSidebarOpen(false)} />
       <div className="main-content">
-        <Topbar />
+        <Topbar onMenuClick={() => setIsSidebarOpen(true)} />
         <main className="page-content">
           <Outlet />
         </main>

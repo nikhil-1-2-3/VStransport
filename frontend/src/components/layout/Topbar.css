@@ -8,7 +8,29 @@
   padding: 0 var(--space-8);
   position: sticky;
   top: 0;
-  z-index: 90;
+  z-index: 30; /* below sidebar overlay */
+}
+
+.topbar-left {
+  display: flex;
+  align-items: center;
+  gap: var(--space-4);
+  flex: 1;
+}
+
+.mobile-menu-btn {
+  display: none;
+  background: none;
+  border: none;
+  color: var(--text-primary);
+  cursor: pointer;
+  padding: var(--space-2);
+  border-radius: var(--radius-md);
+  transition: background-color 0.2s;
+}
+
+.mobile-menu-btn:hover {
+  background-color: var(--bg-tertiary);
 }
 
 .search-container {
@@ -78,5 +100,27 @@
   background-color: var(--status-error);
   border-radius: var(--radius-full);
   box-shadow: 0 0 0 2px var(--bg-primary);
-  font-size: 0; /* Hide text for now, just show dot */
+  font-size: 0;
+}
+
+/* Responsive Styles */
+@media (max-width: 1024px) {
+  .topbar {
+    padding: 0 var(--space-4);
+  }
+
+  .mobile-menu-btn {
+    display: flex;
+  }
+
+  .search-container {
+    width: auto;
+    max-width: 250px;
+  }
+}
+
+@media (max-width: 768px) {
+  .search-container {
+    display: none; /* Hide search on very small screens, or we could iconify it */
+  }
 }

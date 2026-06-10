@@ -2,6 +2,7 @@
   display: flex;
   min-height: 100vh;
   background-color: var(--bg-primary);
+  position: relative;
 }
 
 .main-content {
@@ -9,10 +10,35 @@
   margin-left: 260px; /* Same as sidebar width */
   display: flex;
   flex-direction: column;
+  transition: margin-left 0.3s ease;
+  width: calc(100% - 260px); /* prevent overflow issues */
 }
 
 .page-content {
   padding: var(--space-8);
   flex: 1;
   animation: fadeIn 0.3s ease;
+  overflow-x: hidden;
+}
+
+/* Mobile Overlay */
+.sidebar-overlay {
+  position: fixed;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 40;
+  backdrop-filter: blur(2px);
+  animation: fadeIn 0.2s ease;
+}
+
+/* Responsive Rules */
+@media (max-width: 1024px) {
+  .main-content {
+    margin-left: 0;
+    width: 100%;
+  }
+  
+  .page-content {
+    padding: var(--space-4);
+  }
 }

@@ -796,3 +796,13 @@ body {
 .modal-actions .btn-danger {
   flex: 2;
 }
+
+/* Responsive Rules */
+@media (max-width: 768px) {
+  .stats-overview-desktop { grid-template-columns: 1fr; }
+  .account-desktop-grid { grid-template-columns: 1fr; }
+  .profile-details-grid-desktop { grid-template-columns: 1fr; }
+  .history-grid { grid-template-columns: 1fr; }
+  .profile-header-desktop { flex-direction: column; text-align: center; }
+  .btn-edit-desktop { margin-left: 0; width: 100%; }
+}
