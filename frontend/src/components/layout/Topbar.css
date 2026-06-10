@@ -1,0 +1,82 @@
+.topbar {
+  height: 70px;
+  background-color: var(--bg-primary);
+  border-bottom: 1px solid var(--bg-tertiary);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 var(--space-8);
+  position: sticky;
+  top: 0;
+  z-index: 90;
+}
+
+.search-container {
+  display: flex;
+  align-items: center;
+  background-color: var(--bg-secondary);
+  border: 1px solid var(--bg-tertiary);
+  border-radius: var(--radius-md);
+  padding: var(--space-2) var(--space-4);
+  width: 400px;
+  transition: border-color 0.2s ease;
+}
+
+.search-container:focus-within {
+  border-color: var(--accent-primary);
+}
+
+.search-icon {
+  color: var(--text-tertiary);
+  margin-right: var(--space-3);
+}
+
+.search-input {
+  background: transparent;
+  border: none;
+  color: var(--text-primary);
+  font-family: var(--font-family);
+  font-size: var(--text-sm);
+  width: 100%;
+  outline: none;
+}
+
+.search-input::placeholder {
+  color: var(--text-tertiary);
+}
+
+.topbar-actions {
+  display: flex;
+  align-items: center;
+  gap: var(--space-4);
+}
+
+.icon-button {
+  background: transparent;
+  color: var(--text-secondary);
+  width: 40px;
+  height: 40px;
+  border-radius: var(--radius-full);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s ease;
+  position: relative;
+}
+
+.icon-button:hover {
+  background-color: var(--bg-tertiary);
+  color: var(--text-primary);
+}
+
+.notification-badge {
+  position: absolute;
+  top: 6px;
+  right: 8px;
+  width: 8px;
+  height: 8px;
+  background-color: var(--status-error);
+  border-radius: var(--radius-full);
+  box-shadow: 0 0 0 2px var(--bg-primary);
+  font-size: 0; /* Hide text for now, just show dot */
+}
