@@ -30,7 +30,7 @@ export const triggerSystemNotification = (title: string, options?: NotificationO
         icon: '/vite.svg', // Assuming a standard vite logo is in public, or any icon
         vibrate: [500, 250, 500],
         ...options
-      });
+      } as any);
 
       // Automatically close after 5 seconds
       setTimeout(() => {

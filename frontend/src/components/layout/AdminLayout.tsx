@@ -7,14 +7,14 @@ import { requestNotificationPermission } from '../../utils/notificationUtils';
 import './AdminLayout.css';
 
 export const AdminLayout: React.FC = () => {
-  const { isAuthenticated, role } = useAuthStore();
+  const { user } = useAuthStore();
 
   useEffect(() => {
     // Globally request permission for push notifications when admin logs in
-    if (role === 'ADMIN') {
+    if (user?.role === 'ADMIN') {
       requestNotificationPermission();
     }
-  }, [role]);
+  }, [user?.role]);
 
   return (
     <div className="admin-layout">

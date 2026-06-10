@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { AlertTriangle, CheckCircle, ExternalLink, Camera } from 'lucide-react';
+import { AlertTriangle, CheckCircle, Camera } from 'lucide-react';
 import apiClient from '../api/client';
 
 export const IssuesPanel: React.FC = () => {

@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { motion, AnimatePresence } from 'framer-motion';
-import { Shield, Truck, Clock, MapPin, Phone, Mail, ArrowRight, Building, CheckCircle2, Navigation, Globe, MessageCircle, Radar } from 'lucide-react';
+import { Truck, Clock, MapPin, Phone, Mail, ArrowRight } from 'lucide-react';
 import apiClient from '../api/client';
 import { useAuthStore } from '../store/authStore';
 import './Login.css';
@@ -153,7 +153,7 @@ export const Login: React.FC = () => {
     }
   };
 
-  const fadeUp = {
+  const fadeUp: any = {
     hidden: { opacity: 0, y: 30 },
     visible: { opacity: 1, y: 0, transition: { duration: 0.8, ease: "easeOut" } }
   };

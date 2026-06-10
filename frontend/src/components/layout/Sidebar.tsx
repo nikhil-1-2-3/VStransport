@@ -1,6 +1,6 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
-import { LayoutDashboard, Truck, Users, Briefcase, FileText, Settings, AlertTriangle } from 'lucide-react';
+import { LayoutDashboard, Truck, Users, Briefcase, Settings, AlertTriangle } from 'lucide-react';
 import './Sidebar.css';
 
 const navItems = [
