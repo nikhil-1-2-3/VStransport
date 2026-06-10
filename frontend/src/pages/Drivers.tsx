@@ -74,16 +74,16 @@ export const Drivers: React.FC = () => {
           <tbody>
             {drivers.map(driver => (
               <tr key={driver._id}>
-                <td>
+                <td data-label="Driver Name">
                   <div className="user-cell">
                     <div className="avatar"><UserIcon size={16} /></div>
                     <span>{driver.fullName}</span>
                   </div>
                 </td>
-                <td>{driver.username}</td>
-                <td>{driver.phone || 'N/A'}</td>
-                <td>{driver.licenseNumber || 'N/A'}</td>
-                <td>
+                <td data-label="Username">{driver.username}</td>
+                <td data-label="Phone">{driver.phone || 'N/A'}</td>
+                <td data-label="License No.">{driver.licenseNumber || 'N/A'}</td>
+                <td data-label="Status">
                   <span className={`status-badge ${driver.status === 'ENGAGED' ? 'warning' : 'success'}`}>
                     {driver.status || 'AVAILABLE'}
                   </span>

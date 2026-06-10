@@ -72,15 +72,15 @@ export const Trucks: React.FC = () => {
           <tbody>
             {trucks.map(truck => (
               <tr key={truck._id}>
-                <td>
+                <td data-label="Registration">
                   <div className="user-cell">
                     <div className="avatar"><TruckIcon size={16} /></div>
                     <span>{truck.registrationNumber}</span>
                   </div>
                 </td>
-                <td>{truck.capacityTons} Tons</td>
-                <td>{truck.makeAndModel || 'N/A'}</td>
-                <td><span className={`status-badge ${truck.status === 'AVAILABLE' ? 'success' : ''}`}>{truck.status}</span></td>
+                <td data-label="Capacity">{truck.capacityTons} Tons</td>
+                <td data-label="Make/Model">{truck.makeAndModel || 'N/A'}</td>
+                <td data-label="Status"><span className={`status-badge ${truck.status === 'AVAILABLE' ? 'success' : ''}`}>{truck.status}</span></td>
               </tr>
             ))}
             {trucks.length === 0 && (

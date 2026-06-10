@@ -68,17 +68,86 @@ html, body, #root {
     font-size: 2rem !important;
   }
 
-  /* Tables */
+  /* Tables converted to Mobile Cards */
   .data-table-container,
   .table-responsive {
     width: 100% !important;
-    overflow-x: auto !important;
-    -webkit-overflow-scrolling: touch !important;
+    overflow-x: hidden !important;
     display: block !important;
   }
 
-  .data-table {
-    min-width: 800px; /* Forces scroll instead of squishing */
+  .data-table, .data-table thead, .data-table tbody, .data-table th, .data-table td, .data-table tr {
+    display: block !important;
+    width: 100% !important;
+    box-sizing: border-box !important;
+  }
+  
+  .data-table thead tr {
+    position: absolute !important;
+    top: -9999px !important;
+    left: -9999px !important;
+  }
+
+  .data-table tr {
+    margin-bottom: 1rem !important;
+    border: 1px solid var(--border-color, #e2e8f0) !important;
+    border-radius: 8px !important;
+    background: var(--bg-primary, #ffffff) !important;
+    padding: 0.5rem !important;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.05) !important;
+  }
+
+  .data-table td {
+    border: none !important;
+    border-bottom: 1px solid var(--border-color, #f1f5f9) !important;
+    position: relative !important;
+    padding-left: 45% !important;
+    text-align: right !important;
+    min-height: 40px !important;
+    display: flex !important;
+    justify-content: flex-end !important;
+    align-items: center !important;
+  }
+
+  .data-table td:before {
+    position: absolute !important;
+    top: 50% !important;
+    left: 10px !important;
+    transform: translateY(-50%) !important;
+    width: 40% !important;
+    padding-right: 10px !important;
+    white-space: nowrap !important;
+    text-align: left !important;
+    font-weight: 600 !important;
+    color: var(--text-secondary, #64748b) !important;
+    content: attr(data-label) !important;
+    font-size: 0.85rem !important;
+  }
+
+  .data-table td:last-child {
+    border-bottom: 0 !important;
+  }
+
+  .data-table .empty-state {
+    padding-left: 10px !important;
+    text-align: center !important;
+    justify-content: center !important;
+  }
+  .data-table .empty-state:before {
+    display: none !important;
+  }
+
+  /* Dispatch Center Board */
+  .trips-board {
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 1.5rem !important;
+    overflow-x: hidden !important;
+  }
+  
+  .status-column {
+    min-width: 100% !important;
+    width: 100% !important;
   }
 
   /* Modals */

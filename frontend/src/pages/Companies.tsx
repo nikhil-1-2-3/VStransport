@@ -71,15 +71,15 @@ export const Companies: React.FC = () => {
           <tbody>
             {companies.map(company => (
               <tr key={company._id}>
-                <td>
+                <td data-label="Company Name">
                   <div className="user-cell">
                     <div className="avatar"><Building2 size={16} /></div>
                     <span>{company.name}</span>
                   </div>
                 </td>
-                <td>{company.contactPerson || 'N/A'}</td>
-                <td>{company.contactPhone || 'N/A'}</td>
-                <td><span className="status-badge success">Active</span></td>
+                <td data-label="Contact Person">{company.contactPerson || 'N/A'}</td>
+                <td data-label="Contact Phone">{company.contactPhone || 'N/A'}</td>
+                <td data-label="Status"><span className="status-badge success">Active</span></td>
               </tr>
             ))}
             {companies.length === 0 && (
